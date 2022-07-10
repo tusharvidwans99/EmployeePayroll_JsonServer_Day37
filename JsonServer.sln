@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonServer", "JsonServer\JsonServer.csproj", "{06468363-2D0A-4D4C-A52D-EF0788BBF323}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonServerMSTest", "JsonServerMSTest\JsonServerMSTest.csproj", "{41A6E2A9-7CD3-4666-A619-3E886BBCD42F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{06468363-2D0A-4D4C-A52D-EF0788BBF323}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06468363-2D0A-4D4C-A52D-EF0788BBF323}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06468363-2D0A-4D4C-A52D-EF0788BBF323}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41A6E2A9-7CD3-4666-A619-3E886BBCD42F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41A6E2A9-7CD3-4666-A619-3E886BBCD42F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41A6E2A9-7CD3-4666-A619-3E886BBCD42F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41A6E2A9-7CD3-4666-A619-3E886BBCD42F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

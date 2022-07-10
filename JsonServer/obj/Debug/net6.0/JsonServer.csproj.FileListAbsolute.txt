@@ -1,0 +1,15 @@
+C:\Users\tusha\source\repos\JsonServer\JsonServer\bin\Debug\net6.0\JsonServer.exe
+C:\Users\tusha\source\repos\JsonServer\JsonServer\bin\Debug\net6.0\JsonServer.deps.json
+C:\Users\tusha\source\repos\JsonServer\JsonServer\bin\Debug\net6.0\JsonServer.runtimeconfig.json
+C:\Users\tusha\source\repos\JsonServer\JsonServer\bin\Debug\net6.0\JsonServer.dll
+C:\Users\tusha\source\repos\JsonServer\JsonServer\bin\Debug\net6.0\JsonServer.pdb
+C:\Users\tusha\source\repos\JsonServer\JsonServer\obj\Debug\net6.0\JsonServer.csproj.AssemblyReference.cache
+C:\Users\tusha\source\repos\JsonServer\JsonServer\obj\Debug\net6.0\JsonServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tusha\source\repos\JsonServer\JsonServer\obj\Debug\net6.0\JsonServer.AssemblyInfoInputs.cache
+C:\Users\tusha\source\repos\JsonServer\JsonServer\obj\Debug\net6.0\JsonServer.AssemblyInfo.cs
+C:\Users\tusha\source\repos\JsonServer\JsonServer\obj\Debug\net6.0\JsonServer.csproj.CoreCompileInputs.cache
+C:\Users\tusha\source\repos\JsonServer\JsonServer\obj\Debug\net6.0\JsonServer.dll
+C:\Users\tusha\source\repos\JsonServer\JsonServer\obj\Debug\net6.0\refint\JsonServer.dll
+C:\Users\tusha\source\repos\JsonServer\JsonServer\obj\Debug\net6.0\JsonServer.pdb
+C:\Users\tusha\source\repos\JsonServer\JsonServer\obj\Debug\net6.0\JsonServer.genruntimeconfig.cache
+C:\Users\tusha\source\repos\JsonServer\JsonServer\obj\Debug\net6.0\ref\JsonServer.dll
