@@ -163,5 +163,21 @@ namespace JsonServerMSTest
             Console.WriteLine(response.Content);
         }
 
+
+        /// <summary>
+        /// Given the Employee id, given method should delete that employee data.
+        /// </summary>
+        [TestMethod]
+        public void GivenEmployee_OnDelete_ShouldReturnSuccessStatus()
+        {
+            //request for deleting elements from json 
+            RestRequest request = new RestRequest("employees/7", Method.DELETE);
+            //executing request using rest client
+            IRestResponse response = client.Execute(request);
+            //console writeline will print null for response content after delete operation
+            Console.WriteLine(response.Content);
+            //checking status codes.
+            Assert.AreEqual(response.StatusCode, System.Net.HttpStatusCode.OK);
+        }
     }
 }
