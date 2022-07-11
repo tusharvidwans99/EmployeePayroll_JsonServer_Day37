@@ -1,6 +1,7 @@
 using RestSharp;
 using JsonServer;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace JsonServerMSTest
 {
@@ -25,15 +26,15 @@ namespace JsonServerMSTest
         /// Gets the employee list in the form of restresponse
         /// </summary>
         /// <returns>RestResponse response</returns>
-        private RestResponse getEmployeeList()
+        private IRestResponse getEmployeeList()
         {
             //arrange
             //makes restrequest for getting all the data from json server by giving table name and method.get
-            RestRequest request = new RestRequest("/employees", Method.Get);
+            RestRequest request = new RestRequest("/employees", Method.GET);
 
             //act
             //executing the request using client and saving the result in IrestResponse.
-            RestResponse response = client.Execute(request);
+            IRestResponse response = client.Execute(request);
             return response;
         }
 
@@ -44,7 +45,7 @@ namespace JsonServerMSTest
         public void onCallingGetApi_ReturnEmployeeList()
         {
             //gets the irest response from getemployee list method
-            RestResponse response = getEmployeeList();
+            IRestResponse response = getEmployeeList();
             //assert
             //assert for checking status code of get
             Assert.AreEqual(response.StatusCode, System.Net.HttpStatusCode.OK);
@@ -58,5 +59,38 @@ namespace JsonServerMSTest
             //assert for checking count of no of element in list to be equal to data in jsonserver table.
             Assert.AreEqual(4, dataResponse.Count);
         }
+
+
+
+        /// <summary>
+        /// Givens the employee on post should return added employee. UC2
+        /// </summary>
+        [TestMethod]
+        public void givenEmployee_OnPost_ShouldReturnAddedEmployee()
+        {
+            //arrange
+            //adding request to post(add) data
+            RestRequest request = new RestRequest("/employees", Method.POST);
+            //instatiating jObject for adding data for name and salary, id auto increments
+            JObject jObject = new JObject();
+            jObject.Add("name", "Clark");
+            jObject.Add("salary", "15000");
+            //as parameters are passed as body hence "request body" call is made, in parameter type
+            request.AddParameter("application/json", jObject, ParameterType.RequestBody);
+            //Act
+            //request contains method of post and along with added parameter which contains data to be added
+            //hence response will contain the data which is added and not all the data from jsonserver.
+            //data is added to json server json file in this step.
+            IRestResponse response = client.Execute(request);
+            //assert
+            //code will be 201 for posting data
+            Assert.AreEqual(response.StatusCode, System.Net.HttpStatusCode.Created);
+            //derserializing object for assert and checking test case
+            Employee dataResponse = JsonConvert.DeserializeObject<Employee>(response.Content);
+            Assert.AreEqual("Clark", dataResponse.name);
+            Assert.AreEqual("15000", dataResponse.salary);
+            Console.WriteLine(response.Content);
+        }
+
     }
 }
